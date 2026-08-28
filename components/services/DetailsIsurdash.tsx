@@ -48,7 +48,7 @@ export default function Details1() {
                 <div className="image-details image mb-60">
                   <Image
                     src="/image/section/img-details-service-2.jpg"
-                    alt=""
+                    alt="Plataforma de visualización IsurDash"
                     className="lazyload"
                     width={850}
                     height={512}

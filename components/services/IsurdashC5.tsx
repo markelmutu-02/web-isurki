@@ -27,7 +27,7 @@ export default function Features() {
             <div className="image tf-animate-4">
               <Image
                 src="/image/section/isurdashFeatures/Imágen10.png"
-                alt=""
+                alt="Gráficos avanzados de datos en IsurDash"
                 className="lazyload"
                 width={615}
                 height={615}

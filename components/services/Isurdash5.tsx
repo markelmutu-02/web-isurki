@@ -13,7 +13,7 @@ export default function Downloads() {
               <div className="heading-section">
                 <h3 className="text-anime-wave mb-12">Descargas</h3>
               </div>
-
+              
               <div
                 style={{
                   display: "flex",

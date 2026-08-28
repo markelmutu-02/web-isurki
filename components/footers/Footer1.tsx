@@ -49,7 +49,7 @@ export default function Footer1({ parentClass = "footer" }) {
                 <div className="logo-footer">
                   <Link href={`/`} className="logo">
                     <Image
-                      alt=""
+                      alt="Isurki"
                       src="/image/logo/logo.svg"
                       width={169}
                       height={41}

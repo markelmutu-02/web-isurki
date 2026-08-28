@@ -16,7 +16,7 @@ export default function Details1() {
             <div className="image-details image mb-40">
               <Image
                 src="/image/section/DiagramaMareografos.jpg"
-                alt=""
+                alt="Diagrama de la red de mareógrafos para AZTI"
                 className="lazyload"
                 width={850}
                 height={512}

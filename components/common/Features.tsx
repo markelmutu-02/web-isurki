@@ -76,7 +76,7 @@ export default function Features() {
             <div className="image tf-animate-4">
               <Image
                 src="/image/section/diagrama-ecosistema.png"
-                alt=""
+                alt="Ecosistema de instrumentación y control de Isurki: IsurLog, sensores, IsurDash y servidor propio"
                 className="lazyload"
                 width={615}
                 height={615}

@@ -16,7 +16,7 @@ export default function Details1() {
             <div className="image-details image mb-40">
               <Image
                 src="/image/section/DiagramaVacunas.jpg"
-                alt=""
+                alt="Diagrama de control de temperatura de vacunas con datalogger IsurLog"
                 className="lazyload"
                 width={850}
                 height={512}

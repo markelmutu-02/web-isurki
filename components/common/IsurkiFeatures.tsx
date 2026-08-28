@@ -20,7 +20,7 @@ export default function Features({
             <div className="image mr-15 tf-animate-1">
               <Image
                 src="/image/section/img-section-why-choose-h2.jpg"
-                alt=""
+                alt="Por qué elegir Isurki"
                 className="lazyload"
                 width={615}
                 height={615}

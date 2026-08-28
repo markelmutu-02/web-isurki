@@ -27,7 +27,7 @@ export default function Features() {
             <div className="image tf-animate-4">
               <Image
                 src="/image/section/isurdashFeatures/Imágen5.png"
-                alt=""
+                alt="Lecturas Bluetooth en tiempo real desde IsurLog"
                 className="lazyload"
                 width={615}
                 height={615}

@@ -46,7 +46,7 @@ export default function Details1() {
                 <div className="image-details image mb-60">
                   <Image
                     src="/image/section/img-details-service-3.jpg"
-                    alt=""
+                    alt="Sensores y actuadores Sensórica"
                     className="lazyload"
                     width={850}
                     height={512}

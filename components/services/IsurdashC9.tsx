@@ -27,7 +27,7 @@ export default function Features() {
             <div className="image tf-animate-4">
               <Image
                 src="/image/section/isurdashFeatures/Imágen2.png"
-                alt=""
+                alt="Actualización remota de firmware del IsurLog"
                 className="lazyload"
                 width={615}
                 height={615}

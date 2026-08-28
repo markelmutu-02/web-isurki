@@ -25,7 +25,7 @@ export default function MobileMenu() {
           <div className="logo-mobile">
             <Link href={`/`}>
               <Image
-                alt=""
+                alt="Isurki"
                 src="/image/logo/logo-2.svg"
                 width={169}
                 height={40}

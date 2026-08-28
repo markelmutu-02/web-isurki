@@ -16,7 +16,7 @@ export default function Details1() {
             <div className="image-details image mb-40">
               <Image
                 src="/image/section/DiagramaRiego.jpg"
-                alt=""
+                alt="Diagrama de riego inteligente para explotación agropecuaria"
                 className="lazyload"
                 width={850}
                 height={512}

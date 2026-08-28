@@ -147,7 +147,7 @@ export default function About() {
           <div className="section-about-right tf-animate-4">
             <Image
                               src="/image/team-item/about-us-1.jpg"
-                              alt=""
+                              alt="Equipo de Isurki"
                               className="lazyload"
                               width={650}
                               height={650}

@@ -20,7 +20,7 @@ export default function Features({
             <div className="image mr-15 tf-animate-1">
               <Image
                 src="/image/section/isurdashFeatures/Imágen4.png"
-                alt=""
+                alt="Información de cobertura LoRa y NB-IoT en IsurDash"
                 className="lazyload"
                 width={615}
                 height={615}

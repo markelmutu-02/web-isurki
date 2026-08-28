@@ -20,7 +20,7 @@ export default function Features({
             <div className="image mr-15 tf-animate-1">
               <Image
                 src="/image/section/isurdashFeatures/Imágen11.png"
-                alt=""
+                alt="Visualización de sensores y actuadores en IsurDash"
                 className="lazyload"
                 width={615}
                 height={615}

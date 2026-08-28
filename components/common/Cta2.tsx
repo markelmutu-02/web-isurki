@@ -12,7 +12,7 @@ export default function Cta() {
               <div className="image tf-animate-1">
                 <Image
                   src="/image/team-item/about-us-contact.jpg"
-                  alt=""
+                  alt="Contacta con Isurki"
                   className="lazyload"
                   width={344}
                   height={447}

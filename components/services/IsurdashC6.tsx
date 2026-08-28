@@ -20,7 +20,7 @@ export default function Features({
             <div className="image mr-15 tf-animate-1">
               <Image
                 src="/image/section/isurdashFeatures/Imágen7.png"
-                alt=""
+                alt="Representación 3D de la orientación del IsurLog en IsurDash"
                 className="lazyload"
                 width={615}
                 height={615}

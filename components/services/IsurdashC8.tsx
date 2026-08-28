@@ -20,7 +20,7 @@ export default function Features({
             <div className="image mr-15 tf-animate-1">
               <Image
                 src="/image/section/isurdashFeatures/Imágen1.png"
-                alt=""
+                alt="Consola MicroPython REPL de IsurDash"
                 className="lazyload"
                 width={615}
                 height={615}

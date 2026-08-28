@@ -36,7 +36,7 @@ export default function Header1({ onepage = false }) {
                 <div className="logo">
                   <Link href={`/`}>
                     <Image
-                      alt=""
+                      alt="Isurki"
                       src="/image/logo/logo.svg"
                       width={169}
                       height={40}

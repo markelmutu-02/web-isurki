@@ -13,7 +13,8 @@ export default function Downloads() {
               <div className="heading-section">
                 <h3 className="text-anime-wave mb-12">Descargas</h3>
               </div>
-
+              <a>Obtén mucha mas informacion en la wiki de Isurlog:</a> <a href="https://docs.isurlog.isurki.com/" target="tab">https://docs.isurlog.isurki.com/</a>
+              <br/><br/>
               <div
                 style={{
                   display: "flex",
