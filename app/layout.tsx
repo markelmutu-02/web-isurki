@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   description:
     "Instrumentación y control al servicio de su industria: soluciones propias de captación, monitorización y gestión de datos, diseñadas para entornos exigentes.",
   metadataBase: new URL("https://isurki.com"),
+  verification: {
+    google: "nWHFxznr9PLolVUP3Lj3B2kpdJhP_YUAp9Qdrjl6A4Q",
+  },
 };
 import { ReactNode } from "react";
 
