@@ -128,8 +128,9 @@ export const servicesData = [
     imgHeight: 439,
     title: "IsurLog",
     description:
-      "Datalogger inteligente industrial a pilas con comunicaciones remotas y bajo consumo",
+      "Datalogger industrial a pilas para la medición remota de caudal, presión, nivel y temperatura, con comunicaciones remotas y bajo consumo",
     benefits: [
+      "Medición de caudal, presión, nivel y temperatura mediante entradas 4-20 mA o Modbus",
       "Comunicaciones remotas wireless por redes terrestres con contrato (NB-IoT), libres (LoRa, DECT-NR+) y satelitales (NB-IoT-NTN)",
       "Conectividad inalámbrica local mediante BlueTooth y WiFi",
       "Ultra bajo consumo: máxima autonomía de las pilas. Admite alimentación externa",

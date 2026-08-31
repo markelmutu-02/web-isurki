@@ -51,7 +51,7 @@ export default function Features() {
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title">
-                    Ofrecer información constante sobre los parámetros de los sensores y estados de dispositivos conectados, incluyendo el control de actuadores de campo.
+                    Registrar en tiempo real la medición de caudal, presión, nivel y temperatura mediante sensores conectados por entradas 4-20 mA o Modbus, además del estado de otros dispositivos y actuadores de campo.
                   </div>
                 </div>
                 <div className="benefit-items text-anime-wave">
