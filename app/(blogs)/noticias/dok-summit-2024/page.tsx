@@ -2,15 +2,49 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 
+const TITLE = "DOK Summit 2024";
+const DESCRIPTION =
+  "Isurki participa como ponente en el DOK Summit 2024 presentando el proyecto europeo SMARTDROP.";
+const IMAGE = "/image/blog/tf-post-grid-5.jpg";
+const DATE = "2024-11-26";
+
 export const metadata: Metadata = {
-  title: "DOK Summit 2024 || Isurki",
-  description:
-    "Isurki participa como ponente en el DOK Summit 2024 presentando el proyecto europeo SMARTDROP.",
+  title: `${TITLE} || Isurki`,
+  description: DESCRIPTION,
+  openGraph: {
+    type: "article",
+    title: TITLE,
+    description: DESCRIPTION,
+    publishedTime: DATE,
+    images: [IMAGE],
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: TITLE,
+  description: DESCRIPTION,
+  image: [`https://isurki.com${IMAGE}`],
+  datePublished: DATE,
+  author: { "@type": "Organization", name: "Isurki" },
+  publisher: {
+    "@type": "Organization",
+    name: "Isurki",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://isurki.com/image/logo/logo.svg",
+    },
+  },
 };
 
 export default function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="page-title style-1 bg-img-6">
         <div className="tf-container">
           <div className="row">

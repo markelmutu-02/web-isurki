@@ -2,15 +2,49 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 
+const TITLE = "DECT NR+";
+const DESCRIPTION =
+  "IsurLog incorpora DECT NR+, el estándar 5G no celular que permite montar una red privada real sin operadora ni contrato.";
+const IMAGE = "/image/blog/dect-nr-plus.jpg";
+const DATE = "2026-06-10";
+
 export const metadata: Metadata = {
-  title: "DECT NR+ || Isurki",
-  description:
-    "IsurLog incorpora DECT NR+, el estándar 5G no celular que permite montar una red privada real sin operadora ni contrato.",
+  title: `${TITLE} || Isurki`,
+  description: DESCRIPTION,
+  openGraph: {
+    type: "article",
+    title: TITLE,
+    description: DESCRIPTION,
+    publishedTime: DATE,
+    images: [IMAGE],
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: TITLE,
+  description: DESCRIPTION,
+  image: [`https://isurki.com${IMAGE}`],
+  datePublished: DATE,
+  author: { "@type": "Organization", name: "Isurki" },
+  publisher: {
+    "@type": "Organization",
+    name: "Isurki",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://isurki.com/image/logo/logo.svg",
+    },
+  },
 };
 
 export default function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="page-title style-1 bg-img-6">
         <div className="tf-container">
           <div className="row">

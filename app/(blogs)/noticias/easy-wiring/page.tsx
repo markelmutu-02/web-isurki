@@ -2,15 +2,49 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 
+const TITLE = "Easy-Wiring";
+const DESCRIPTION =
+  "Isurki presenta Easy-Wiring, el nuevo sistema de cableado de la gama IsurLog para simplificar la instalación en campo.";
+const IMAGE = "/image/blog/easy-wiring.jpg";
+const DATE = "2026-05-15";
+
 export const metadata: Metadata = {
-  title: "Easy-Wiring || Isurki",
-  description:
-    "Isurki presenta Easy-Wiring, el nuevo sistema de cableado de la gama IsurLog para simplificar la instalación en campo.",
+  title: `${TITLE} || Isurki`,
+  description: DESCRIPTION,
+  openGraph: {
+    type: "article",
+    title: TITLE,
+    description: DESCRIPTION,
+    publishedTime: DATE,
+    images: [IMAGE],
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: TITLE,
+  description: DESCRIPTION,
+  image: [`https://isurki.com${IMAGE}`],
+  datePublished: DATE,
+  author: { "@type": "Organization", name: "Isurki" },
+  publisher: {
+    "@type": "Organization",
+    name: "Isurki",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://isurki.com/image/logo/logo.svg",
+    },
+  },
 };
 
 export default function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="page-title style-1 bg-img-6">
         <div className="tf-container">
           <div className="row">

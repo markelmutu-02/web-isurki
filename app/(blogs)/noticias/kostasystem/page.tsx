@@ -2,15 +2,49 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 
+const TITLE = "KOSTASystem";
+const DESCRIPTION =
+  "Isurki desarrolla, junto a AZTI, estaciones remotas basadas en TORADEX Apalis para la vigilancia videométrica del litoral vasco.";
+const IMAGE = "/image/blog/tf-post-grid-6.jpg";
+const DATE = "2020-07-08";
+
 export const metadata: Metadata = {
-  title: "KOSTASystem || Isurki",
-  description:
-    "Isurki desarrolla, junto a AZTI, estaciones remotas basadas en TORADEX Apalis para la vigilancia videométrica del litoral vasco.",
+  title: `${TITLE} || Isurki`,
+  description: DESCRIPTION,
+  openGraph: {
+    type: "article",
+    title: TITLE,
+    description: DESCRIPTION,
+    publishedTime: DATE,
+    images: [IMAGE],
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: TITLE,
+  description: DESCRIPTION,
+  image: [`https://isurki.com${IMAGE}`],
+  datePublished: DATE,
+  author: { "@type": "Organization", name: "Isurki" },
+  publisher: {
+    "@type": "Organization",
+    name: "Isurki",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://isurki.com/image/logo/logo.svg",
+    },
+  },
 };
 
 export default function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="page-title style-1 bg-img-6">
         <div className="tf-container">
           <div className="row">

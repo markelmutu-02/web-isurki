@@ -2,10 +2,40 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 
+const TITLE = "Baterías LiSOCl2";
+const DESCRIPTION =
+  "El ISURLOG (v2026) incorpora soporte para baterías LiSOCl2 no recargables, ampliando su autonomía en campo de 17 a 38 Ah.";
+const IMAGE = "/image/blog/pilas-portada.jpg";
+const DATE = "2026-08-10";
+
 export const metadata: Metadata = {
-  title: "Baterías LiSOCl2 || Isurki",
-  description:
-    "El ISURLOG (v2026) incorpora soporte para baterías LiSOCl2 no recargables, ampliando su autonomía en campo de 17 a 38 Ah.",
+  title: `${TITLE} || Isurki`,
+  description: DESCRIPTION,
+  openGraph: {
+    type: "article",
+    title: TITLE,
+    description: DESCRIPTION,
+    publishedTime: DATE,
+    images: [IMAGE],
+  },
+};
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: TITLE,
+  description: DESCRIPTION,
+  image: [`https://isurki.com${IMAGE}`],
+  datePublished: DATE,
+  author: { "@type": "Organization", name: "Isurki" },
+  publisher: {
+    "@type": "Organization",
+    name: "Isurki",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://isurki.com/image/logo/logo.svg",
+    },
+  },
 };
 
 const tableCell: React.CSSProperties = {
@@ -23,6 +53,10 @@ const tableHeadCell: React.CSSProperties = {
 export default function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="page-title style-1 bg-img-6">
         <div className="tf-container">
           <div className="row">

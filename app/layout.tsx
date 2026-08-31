@@ -10,13 +10,38 @@ import Context from "@/context/Context";
 import { rtlInitScript } from "@/lib/rtl-init";
 
 import { Metadata } from "next";
+const SITE_TITLE = "ISURKI - Instrumentación y control";
+const SITE_DESCRIPTION =
+  "Instrumentación y control al servicio de su industria: soluciones propias de captación, monitorización y gestión de datos, diseñadas para entornos exigentes.";
+
 export const metadata: Metadata = {
-  title: "ISURKI - Instrumentación y control",
-  description:
-    "Instrumentación y control al servicio de su industria: soluciones propias de captación, monitorización y gestión de datos, diseñadas para entornos exigentes.",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   metadataBase: new URL("https://isurki.com"),
   verification: {
     google: "nWHFxznr9PLolVUP3Lj3B2kpdJhP_YUAp9Qdrjl6A4Q",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    siteName: "Isurki",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "https://isurki.com",
+    images: [
+      {
+        url: "/image/page-title/page-title-home-1.jpg",
+        width: 1200,
+        height: 900,
+        alt: "Isurki - Instrumentación y control",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ["/image/page-title/page-title-home-1.jpg"],
   },
 };
 import { ReactNode } from "react";
