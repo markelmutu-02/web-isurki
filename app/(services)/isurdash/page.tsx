@@ -2,10 +2,9 @@ import DetailsIsurdash from "@/components/services/DetailsIsurdash";
 import React from "react";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title:
-    "ISURDASH - El dashboard definitivo",
+  title: "IsurDash - Plataforma IoT de monitorización remota || Isurki",
   description:
-    "Dashboard de visualización y configuración para el datalogger IsurLog",
+    "IsurDash es la plataforma de visualización y gestión remota de datos IoT de Isurki: dashboards, histórico y alarmas para el datalogger IsurLog.",
 };
 export default function page() {
   return (

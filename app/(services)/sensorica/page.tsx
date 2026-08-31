@@ -4,10 +4,9 @@ import SensoricaDetails from "@/components/services/SensoricaDetails";
 import React from "react";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title:
-    "SENSÓRICA - Gama completa",
+  title: "Sensórica - Sensores industriales IoT || Isurki",
   description:
-    "Amplia gama de sensores y actuadores para cubrir cualquier necesidad del mercado",
+    "Sensores industriales IoT para caudal, presión, temperatura, pH y calidad del agua, totalmente compatibles con el ecosistema IsurLog de Isurki.",
 };
 export default function page() {
   return (

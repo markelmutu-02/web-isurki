@@ -2,10 +2,9 @@ import Details1 from "@/components/services/Details1";
 import React from "react";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title:
-    "ISURLOG - Datalogger industrial NB-IoT/LoRa",
+  title: "ISURLOG - Datalogger industrial NB-IoT/LoRa || Isurki",
   description:
-    "Datalogger con pilas de ultra bajo consumo",
+    "IsurLog: datalogger industrial de ultra bajo consumo para monitorización remota y telemetría IoT, con comunicaciones NB-IoT, LoRa, DECT NR+ y satelitales.",
 };
 export default function page() {
   return (
