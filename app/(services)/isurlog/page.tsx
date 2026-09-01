@@ -6,9 +6,28 @@ export const metadata: Metadata = {
   description:
     "IsurLog: datalogger industrial IoT a pilas de ultra bajo consumo. Compatible con sensores de caudal, presión, nivel y temperatura mediante entradas analógicas 4-20 mA y Modbus, con comunicaciones NB-IoT, LoRa, DECT NR+ y satelitales.",
 };
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "IsurLog",
+  description:
+    "Datalogger industrial IoT a pilas de ultra bajo consumo para la medición remota de caudal, presión, nivel y temperatura, con comunicaciones NB-IoT, LoRa, DECT NR+ y satelitales.",
+  image: "https://isurki.com/image/section/img-details-service-1.jpg",
+  url: "https://isurki.com/isurlog",
+  brand: {
+    "@type": "Brand",
+    name: "Isurki",
+  },
+};
+
 export default function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
       <div className="page-title style-1 bg-img-6">
         <div className="tf-container">
           <div className="page-title-content">

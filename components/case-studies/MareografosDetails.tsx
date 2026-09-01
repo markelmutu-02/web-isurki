@@ -42,7 +42,7 @@ export default function Details1() {
               <h4 className="title-content mb-16">Solución</h4>
               <div className="desc mb-20 body-2">
                 Instalación de un sensor radar de medición de nivel junto con un datalogger{" "}
-                <Link href="/isurlog">ISURLOG-NB</Link> con conexión NB-IoT y datos en la nube mediante la plataforma ISURLOG. 
+                <Link href="/isurlog">ISURLOG-NB</Link> con conexión NB-IoT y datos en la nube mediante la plataforma <Link href="/isurdash">IsurDash</Link>.
               </div>
             </div>
             
