@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect } from "react";
 import Isurlog1 from "./Isurlog1";
 import Isurlog2 from "./Isurlog2";
@@ -64,6 +65,33 @@ export default function Details1() {
                 </div>
                 <div className="detalis-content mb-60" id="menu-sidebar-3">
                   <Isurlog3 />
+                </div>
+                <div className="detalis-content mb-60">
+                  <h4 className="title-content mb-16">
+                    Casos de éxito con IsurLog
+                  </h4>
+                  <ul style={{ listStyle: "disc", paddingLeft: 20 }}>
+                    <li className="body-2">
+                      <Link href="/control-vacunas-details">
+                        Control de temperatura de vacunas para Osakidetza
+                      </Link>
+                    </li>
+                    <li className="body-2">
+                      <Link href="/mareografos-details">
+                        Red de mareógrafos para AZTI
+                      </Link>
+                    </li>
+                    <li className="body-2">
+                      <Link href="/control-ACS-details">
+                        Control de Legionela en red ACS para Osakidetza
+                      </Link>
+                    </li>
+                    <li className="body-2">
+                      <Link href="/control-riego-details">
+                        Riego inteligente para Solans-Castells
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

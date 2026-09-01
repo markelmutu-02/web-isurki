@@ -37,7 +37,8 @@ export default function Details1() {
             <div className="detalis-content mb-40">
               <h4 className="title-content mb-16">Solución</h4>
               <div className="desc mb-20 body-2">
-                Despliegue de una red LoRa compuesta por 2 gateways y 36 nodos basados en dataloggers IsurLog gestionables desde una plataforma en la nube con mediciones de temperatura y caudal en cada uno de los puntos críticos de la red. Actuación sobre las válvulas termostáticas para regular automáticamente la temperatura óptima de cada ramal.
+                Despliegue de una red LoRa compuesta por 2 gateways y 36 nodos basados en dataloggers{" "}
+                <Link href="/isurlog">IsurLog</Link> gestionables desde una plataforma en la nube con mediciones de temperatura y caudal en cada uno de los puntos críticos de la red. Actuación sobre las válvulas termostáticas para regular automáticamente la temperatura óptima de cada ramal.
               </div>
             </div>
             <div className="detalis-content mb-40">

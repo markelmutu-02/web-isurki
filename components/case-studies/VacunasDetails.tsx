@@ -37,7 +37,8 @@ export default function Details1() {
             <div className="detalis-content mb-40">
               <h4 className="title-content mb-16">Solución</h4>
               <div className="desc mb-20 body-2">
-                Despliegue de una red LoRa compuesta por 1 gateway para cada centro de salud y nodos locales basados en dataloggers IsurLog gestionables desde una plataforma en la nube con mediciones de temperatura en cada uno de los puntos de almacenamiento (locales de farmacia y frigoríficos).
+                Despliegue de una red LoRa compuesta por 1 gateway para cada centro de salud y nodos locales basados en dataloggers{" "}
+                <Link href="/isurlog">IsurLog</Link> gestionables desde una plataforma en la nube con mediciones de temperatura en cada uno de los puntos de almacenamiento (locales de farmacia y frigoríficos).
               </div>
             </div>
             
