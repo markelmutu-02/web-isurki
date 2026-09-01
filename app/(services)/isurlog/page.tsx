@@ -2,9 +2,9 @@ import Details1 from "@/components/services/Details1";
 import React from "react";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "ISURLOG - Datalogger de medición de caudal y presión || Isurki",
+  title: "ISURLOG - Datalogger IoT a pilas ultraeficiente || Isurki",
   description:
-    "IsurLog: datalogger industrial de ultra bajo consumo para la medición remota de caudal, presión, nivel y temperatura, con comunicaciones NB-IoT, LoRa, DECT NR+ y satelitales.",
+    "IsurLog: datalogger industrial IoT a pilas de ultra bajo consumo. Compatible con sensores de caudal, presión, nivel y temperatura mediante entradas analógicas 4-20 mA y Modbus, con comunicaciones NB-IoT, LoRa, DECT NR+ y satelitales.",
 };
 export default function page() {
   return (
@@ -15,7 +15,7 @@ export default function page() {
             
             <h2 className="title-page-title">IsurLog</h2>
             <div className="sub-title body-2">
-              Datalogger IIoT de última generación para la medición de caudal, presión, nivel y temperatura, con el software más potente del mercado
+              Datalogger IIoT de última generación con el software más potente del mercado
             </div>
           </div>
         </div>
