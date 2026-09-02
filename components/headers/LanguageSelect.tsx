@@ -1,31 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { getAlternatePath } from "@/data/localePaths";
 
-export default function LanguageDropdown() {
-  const languages = ["ES"];
-  const [selectedLang, setSelectedLang] = useState("ES");
-
-  const handleSelect = (lang: string) => {
-    setSelectedLang(lang);
-  };
+export default function LanguageDropdown({
+  current = "ES",
+}: {
+  current?: "ES" | "EN";
+}) {
+  const pathname = usePathname() || "/";
+  const esHref = getAlternatePath(pathname, "es");
+  const enHref = getAlternatePath(pathname, "en");
 
   return (
-    <div className="tf-dropdown-sort tf-language" data-bs-toggle="dropdown">
-      <div className="btn-select">
-        <span className="text-sort-value label">{selectedLang}</span>
+    <div className="tf-dropdown-sort tf-language">
+      <div className="btn-select" data-bs-toggle="dropdown" aria-expanded="false">
+        <span className="text-sort-value label">{current}</span>
         <i className="icon-Arrow-Down" />
       </div>
       <div className="dropdown-menu">
-        {languages.map((lang) => (
-          <div
-            key={lang}
-            className="select-item"
-            data-sort-value={lang}
-            onClick={() => handleSelect(lang)}
-          >
-            <span className="text-value-item">{lang}</span>
-          </div>
-        ))}
+        <Link href={esHref} className="select-item">
+          <span className="text-value-item">ES</span>
+        </Link>
+        <Link href={enHref} className="select-item">
+          <span className="text-value-item">EN</span>
+        </Link>
       </div>
     </div>
   );
