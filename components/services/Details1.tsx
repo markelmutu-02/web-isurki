@@ -72,22 +72,34 @@ export default function Details1() {
                   </h4>
                   <ul style={{ listStyle: "disc", paddingLeft: 20 }}>
                     <li className="body-2">
-                      <Link href="/control-vacunas-details">
+                      <Link
+                        href="/control-vacunas-details"
+                        style={{ color: "var(--primary)", textDecoration: "underline" }}
+                      >
                         Control de temperatura de vacunas para Osakidetza
                       </Link>
                     </li>
                     <li className="body-2">
-                      <Link href="/mareografos-details">
+                      <Link
+                        href="/mareografos-details"
+                        style={{ color: "var(--primary)", textDecoration: "underline" }}
+                      >
                         Red de mareógrafos para AZTI
                       </Link>
                     </li>
                     <li className="body-2">
-                      <Link href="/control-ACS-details">
+                      <Link
+                        href="/control-ACS-details"
+                        style={{ color: "var(--primary)", textDecoration: "underline" }}
+                      >
                         Control de Legionela en red ACS para Osakidetza
                       </Link>
                     </li>
                     <li className="body-2">
-                      <Link href="/control-riego-details">
+                      <Link
+                        href="/control-riego-details"
+                        style={{ color: "var(--primary)", textDecoration: "underline" }}
+                      >
                         Riego inteligente para Solans-Castells
                       </Link>
                     </li>

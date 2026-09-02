@@ -341,10 +341,45 @@ const NEWS_MONTHS: Record<string, number> = {
 const newsDateValue = (date: { day: string; month: string; year: string }) =>
   new Date(Number(date.year), NEWS_MONTHS[date.month] ?? 0, Number(date.day)).getTime();
 
-export const posts4 = [
+interface NewsPost {
+  id: number;
+  slug: string;
+  imgSrc: string;
+  imgWidth: number;
+  imgHeight: number;
+  category: string;
+  title: string;
+  description: string;
+  date: { day: string; month: string; year: string };
+  delay: string;
+  // Controla qué noticia ocupa el recuadro grande destacado en /noticias.
+  // No es automático por fecha: se marca a mano la que se considera más
+  // importante, que no tiene por qué ser la más reciente.
+  featured?: boolean;
+}
+
+export const posts4: NewsPost[] = [
+  {
+    id: 37,
+    slug: "calculadora-autonomia-pilas",
+    imgSrc: "/image/blog/battery-calc1.jpg",
+    imgWidth: 400,
+    imgHeight: 300,
+    category: "Producto",
+    title: "Nueva calculadora de consumos y autonomía a pilas",
+    description:
+      "Ya disponible la nueva calculadora de IsurLog para estimar el consumo y la autonomía a pilas según comunicaciones, latencia, tipo de pilas y sensores conectados",
+    date: {
+      day: "2",
+      month: "SEP",
+      year: "2026"
+    },
+    delay: "0s",
+  },
   {
     id: 36,
     slug: "baterias-lisocl2",
+    featured: true,
     imgSrc: "/image/blog/pilas-portada.jpg",
     imgWidth: 1290,
     imgHeight: 504,

@@ -4,9 +4,11 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { posts4 } from "@/data/blogs";
 
-// posts4 ya viene ordenado por fecha (más reciente primero): la primera
-// noticia se usa como destacada grande, el resto va en la cuadrícula.
-const [featuredPost, ...otherPosts] = posts4;
+// posts4 ya viene ordenado por fecha (más reciente primero). La noticia
+// destacada grande es la marcada con featured:true (no necesariamente la
+// más reciente); si ninguna lo está, se usa la primera como respaldo.
+const featuredPost = posts4.find((post) => post.featured) ?? posts4[0];
+const otherPosts = posts4.filter((post) => post !== featuredPost);
 
 export default function Blogs3() {
   const [filteres, setFilteres] = useState(otherPosts);

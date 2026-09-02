@@ -38,7 +38,13 @@ export default function Details1() {
               <h4 className="title-content mb-16">Solución</h4>
               <div className="desc mb-20 body-2">
                         ◦ <strong>Para el control de caudales captados (1) y retornados (2) en canal a cielo abierto:</strong> Instrumentación y dataloggers{" "}
-                        <Link href="/isurlog">ISURLOG</Link> con comunicaciones NB-IoT y datos en la nube. <br/>
+                        <Link
+                          href="/isurlog"
+                          style={{ color: "var(--primary)", textDecoration: "underline" }}
+                        >
+                          ISURLOG
+                        </Link>{" "}
+                        con comunicaciones NB-IoT y datos en la nube. <br/>
                         ◦ <strong>Para los ramales principales en tubería a presión, con dataloggers ISURLOG-NB:</strong>  <br/>
                             &nbsp;&nbsp;&nbsp;&nbsp;▪ Medición de caudal derivado en cabecera del ramal. <br/>
                             &nbsp;&nbsp;&nbsp;&nbsp;▪ Regulación de presión de servicio en función de la demanda. <br/>

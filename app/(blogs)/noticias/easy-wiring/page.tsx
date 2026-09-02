@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Metadata } from "next";
 
 const TITLE = "Easy-Wiring";
@@ -11,6 +12,13 @@ const DATE = "2026-05-15";
 export const metadata: Metadata = {
   title: `${TITLE} || Isurki`,
   description: DESCRIPTION,
+  alternates: {
+    canonical: "https://isurki.com/noticias/easy-wiring",
+    languages: {
+      es: "https://isurki.com/noticias/easy-wiring",
+      en: "https://isurki.com/en/news/easy-wiring",
+    },
+  },
   openGraph: {
     type: "article",
     title: TITLE,
@@ -69,7 +77,14 @@ export default function page() {
                 <div className="desc-blog">
                   <p className="body-2">
                     Isurki presenta Easy-Wiring, el nuevo sistema de cableado
-                    incorporado en la gama de dataloggers IsurLog para
+                    incorporado en la gama de dataloggers{" "}
+                    <Link
+                      href="/isurlog"
+                      style={{ color: "var(--primary)", textDecoration: "underline" }}
+                    >
+                      IsurLog
+                    </Link>{" "}
+                    para
                     simplificar y agilizar la instalación en campo.
                   </p>
                   <p className="body-2">

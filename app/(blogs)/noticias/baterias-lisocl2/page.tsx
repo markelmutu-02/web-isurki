@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Metadata } from "next";
 
 const TITLE = "Baterías LiSOCl2";
@@ -11,6 +12,13 @@ const DATE = "2026-08-10";
 export const metadata: Metadata = {
   title: `${TITLE} || Isurki`,
   description: DESCRIPTION,
+  alternates: {
+    canonical: "https://isurki.com/noticias/baterias-lisocl2",
+    languages: {
+      es: "https://isurki.com/noticias/baterias-lisocl2",
+      en: "https://isurki.com/en/news/lisocl2-batteries",
+    },
+  },
   openGraph: {
     type: "article",
     title: TITLE,
@@ -81,7 +89,14 @@ export default function page() {
               <div className="blog-content blog-details-content mb-50">
                 <div className="desc-blog">
                   <p className="body-2">
-                    El datalogger IoT ISURLOG (v2026) da un salto cualitativo
+                    El datalogger IoT{" "}
+                    <Link
+                      href="/isurlog"
+                      style={{ color: "var(--primary)", textDecoration: "underline" }}
+                    >
+                      ISURLOG
+                    </Link>{" "}
+                    (v2026) da un salto cualitativo
                     en su diseño al incorporar soporte para baterías no
                     recargables de cloruro de tionilo y litio (LiSOCl2),
                     ampliando sus capacidades operativas en campo y

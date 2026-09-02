@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Metadata } from "next";
 
 const TITLE = "DECT NR+";
@@ -11,6 +12,13 @@ const DATE = "2026-06-10";
 export const metadata: Metadata = {
   title: `${TITLE} || Isurki`,
   description: DESCRIPTION,
+  alternates: {
+    canonical: "https://isurki.com/noticias/dect-nr-plus",
+    languages: {
+      es: "https://isurki.com/noticias/dect-nr-plus",
+      en: "https://isurki.com/en/news/dect-nr-plus",
+    },
+  },
   openGraph: {
     type: "article",
     title: TITLE,
@@ -69,8 +77,15 @@ export default function page() {
               <div className="blog-content blog-details-content mb-50">
                 <div className="desc-blog">
                   <p className="body-2">
-                    La última versión 2026 de la gama de datalogger IoT
-                    IsurLog incluye en su ejecución básica la opción de
+                    La última versión 2026 de la gama de datalogger IoT{" "}
+                    <Link
+                      href="/isurlog"
+                      style={{ color: "var(--primary)", textDecoration: "underline" }}
+                    >
+                      IsurLog
+                    </Link>{" "}
+                    incluye en su
+                    ejecución básica la opción de
                     operar en 5G sin operadora ni contrato, basándose en el
                     estándar DECT NR+, ofreciendo las siguientes ventajas
                     disruptivas:
