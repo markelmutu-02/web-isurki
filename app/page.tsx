@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     "ISURKI - Instrumentación y control",
   description:
     "Isurki: instrumentación y control industrial en Irún (Gipuzkoa). Dataloggers IoT, sensores y plataforma propia para monitorización remota y telemetría industrial.",
+  alternates: {
+    canonical: "https://isurki.com/",
+    languages: {
+      es: "https://isurki.com/",
+      en: "https://isurki.com/en",
+    },
+  },
 };
 export default function Home() {
   return (

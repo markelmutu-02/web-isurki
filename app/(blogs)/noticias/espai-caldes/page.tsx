@@ -11,6 +11,13 @@ const DATE = "2024-11-15";
 export const metadata: Metadata = {
   title: `${TITLE} || Isurki`,
   description: DESCRIPTION,
+  alternates: {
+    canonical: "https://isurki.com/noticias/espai-caldes",
+    languages: {
+      es: "https://isurki.com/noticias/espai-caldes",
+      en: "https://isurki.com/en/news/espai-caldes",
+    },
+  },
   openGraph: {
     type: "article",
     title: TITLE,

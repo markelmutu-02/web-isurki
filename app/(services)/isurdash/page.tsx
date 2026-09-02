@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "IsurDash - Plataforma IoT de monitorización remota || Isurki",
   description:
     "IsurDash es la plataforma de visualización y gestión remota de datos IoT de Isurki: dashboards, histórico y alarmas para el datalogger IsurLog.",
+  alternates: {
+    canonical: "https://isurki.com/isurdash",
+    languages: {
+      es: "https://isurki.com/isurdash",
+      en: "https://isurki.com/en/isurdash",
+    },
+  },
 };
 
 const softwareJsonLd = {

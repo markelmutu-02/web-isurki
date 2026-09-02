@@ -8,7 +8,14 @@ export default function ContactForm({
   parentClass = "form-contact-home style-border",
   btnClass = "tf-btn style-2 bg-on-suface-container w-full text-center",
   isTitleCenter = true,
-  title = "Obtén un presupuesto gratuito",
+  title,
+  lang = "es",
+}: {
+  parentClass?: string;
+  btnClass?: string;
+  isTitleCenter?: boolean;
+  title?: string;
+  lang?: "es" | "en";
 }) {
   const [success, setSuccess] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
@@ -19,12 +26,47 @@ export default function ContactForm({
       setShowMessage(false);
     }, 2000);
   };
-  interface ContactFormProps {
-    parentClass?: string;
-    btnClass?: string;
-    isTitleCenter?: boolean;
-    title?: string;
-  }
+
+  const t =
+    lang === "en"
+      ? {
+          title: "Get a free quote",
+          name: "Full name",
+          phone: "Phone number",
+          email: "Email address",
+          options: [
+            "How can we help you?",
+            "Request a quote",
+            "Personalized advice",
+            "Information",
+            "Custom case study",
+            "Other",
+          ],
+          message: "Message",
+          success: "Form submitted successfully.",
+          error: "Something went wrong",
+          submit: "Send request",
+        }
+      : {
+          title: "Obtén un presupuesto gratuito",
+          name: "Nombre completo",
+          phone: "Número de teléfono",
+          email: "Correo electrónico",
+          options: [
+            "¿Como podemos ayudarte?",
+            "Pedir presupuesto",
+            "Asesoramiento personalizado",
+            "Información",
+            "Estudio de caso personal",
+            "Otro",
+          ],
+          message: "Mensaje",
+          success: "Form submitted successfully.",
+          error: "Something went wrong",
+          submit: "Enviar solicitud",
+        };
+
+  const resolvedTitle = title ?? t.title;
 
   interface SendEmailEvent extends React.FormEvent<HTMLFormElement> {
     currentTarget: HTMLFormElement & {
@@ -76,23 +118,21 @@ export default function ContactForm({
   return (
     <form onSubmit={sendEmail} className={parentClass}>
       <h5 className={`title-form ${isTitleCenter ? "text-center" : ""}`}>
-        {title}
+        {resolvedTitle}
       </h5>
       <fieldset>
-        <input required name="name" type="text" placeholder="Nombre completo" />
+        <input required name="name" type="text" placeholder={t.name} />
       </fieldset>
       <fieldset>
-        <input required name="phone" type="tel" placeholder="Número de teléfono" />
+        <input required name="phone" type="tel" placeholder={t.phone} />
       </fieldset>
       <fieldset>
-        <input required type="email" name="email" placeholder="Correo electrónico" />
+        <input required type="email" name="email" placeholder={t.email} />
       </fieldset>
 
-      <DropdownSelect
-        options={["¿Como podemos ayudarte?", "Pedir presupuesto", "Asesoramiento personalizado", "Información", "Estudio de caso personal", "Otro"]}
-      />
+      <DropdownSelect options={t.options} />
       <fieldset>
-        <textarea required  name="message" placeholder="Mensaje" defaultValue={""} />
+        <textarea required  name="message" placeholder={t.message} defaultValue={""} />
       </fieldset>
       <div
         className={`tfSubscribeMsg  footer-sub-element ${
@@ -101,14 +141,14 @@ export default function ContactForm({
       >
         {success ? (
           <p style={{ color: "rgb(52, 168, 83)" }}>
-            Form submitted successfully.
+            {t.success}
           </p>
         ) : (
-          <p style={{ color: "red" }}>Something went wrong</p>
+          <p style={{ color: "red" }}>{t.error}</p>
         )}
       </div>
       <button type="submit" className={btnClass}>
-        <span> Enviar solicitud </span>
+        <span> {t.submit} </span>
       </button>
     </form>
   );

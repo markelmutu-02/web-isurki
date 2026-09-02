@@ -6,6 +6,13 @@ export const metadata: Metadata = {
     "Noticias || Isurki",
   description:
     "Últimas noticias y eventos de Isurki",
+  alternates: {
+    canonical: "https://isurki.com/noticias",
+    languages: {
+      es: "https://isurki.com/noticias",
+      en: "https://isurki.com/en/news",
+    },
+  },
 };
 export default function page() {
   return (

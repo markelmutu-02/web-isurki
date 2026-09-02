@@ -4,6 +4,13 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Política de cookies || Isurki",
   description: "Información sobre el uso de cookies en el sitio web de Isurki.",
+  alternates: {
+    canonical: "https://isurki.com/politica-de-cookies",
+    languages: {
+      es: "https://isurki.com/politica-de-cookies",
+      en: "https://isurki.com/en/cookie-policy",
+    },
+  },
 };
 
 export default function page() {

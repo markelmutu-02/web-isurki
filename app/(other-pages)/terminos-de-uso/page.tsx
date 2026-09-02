@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Términos de uso || Isurki",
   description:
     "Términos y condiciones de uso del sitio web de Isurki.",
+  alternates: {
+    canonical: "https://isurki.com/terminos-de-uso",
+    languages: {
+      es: "https://isurki.com/terminos-de-uso",
+      en: "https://isurki.com/en/terms-of-use",
+    },
+  },
 };
 
 export default function page() {

@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: "Contacto || Isurki",
   description:
     "Ponte en contacto con Isurki para resolver tus dudas sobre nuestras soluciones de instrumentación y control.",
+  alternates: {
+    canonical: "https://isurki.com/contact-us",
+    languages: {
+      es: "https://isurki.com/contact-us",
+      en: "https://isurki.com/en/contact-us",
+    },
+  },
 };
 export default function page() {
   return (

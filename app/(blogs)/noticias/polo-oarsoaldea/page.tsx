@@ -11,6 +11,13 @@ const DATE = "2024-12-04";
 export const metadata: Metadata = {
   title: `${TITLE} || Isurki`,
   description: DESCRIPTION,
+  alternates: {
+    canonical: "https://isurki.com/noticias/polo-oarsoaldea",
+    languages: {
+      es: "https://isurki.com/noticias/polo-oarsoaldea",
+      en: "https://isurki.com/en/news/polo-oarsoaldea",
+    },
+  },
   openGraph: {
     type: "article",
     title: TITLE,

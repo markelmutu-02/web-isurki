@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "ISURLOG - Datalogger IoT a pilas ultraeficiente || Isurki",
   description:
     "IsurLog: datalogger industrial IoT a pilas de ultra bajo consumo. Compatible con sensores de caudal, presión, nivel y temperatura mediante entradas analógicas 4-20 mA y Modbus, con comunicaciones NB-IoT, LoRa, DECT NR+ y satelitales.",
+  alternates: {
+    canonical: "https://isurki.com/isurlog",
+    languages: {
+      es: "https://isurki.com/isurlog",
+      en: "https://isurki.com/en/isurlog",
+    },
+  },
 };
 
 const productJsonLd = {

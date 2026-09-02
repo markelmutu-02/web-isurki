@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Política de privacidad || Isurki",
   description:
     "Información sobre el tratamiento de datos personales por parte de Isurki.",
+  alternates: {
+    canonical: "https://isurki.com/politica-de-privacidad",
+    languages: {
+      es: "https://isurki.com/politica-de-privacidad",
+      en: "https://isurki.com/en/privacy-policy",
+    },
+  },
 };
 
 export default function page() {

@@ -11,6 +11,13 @@ const DATE = "2020-07-08";
 export const metadata: Metadata = {
   title: `${TITLE} || Isurki`,
   description: DESCRIPTION,
+  alternates: {
+    canonical: "https://isurki.com/noticias/kostasystem",
+    languages: {
+      es: "https://isurki.com/noticias/kostasystem",
+      en: "https://isurki.com/en/news/kostasystem",
+    },
+  },
   openGraph: {
     type: "article",
     title: TITLE,

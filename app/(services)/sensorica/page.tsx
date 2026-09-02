@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "Sensórica - Sensores industriales IoT || Isurki",
   description:
     "Sensores industriales IoT para caudal, presión, temperatura, pH y calidad del agua, totalmente compatibles con el ecosistema IsurLog de Isurki.",
+  alternates: {
+    canonical: "https://isurki.com/sensorica",
+    languages: {
+      es: "https://isurki.com/sensorica",
+      en: "https://isurki.com/en/sensorica",
+    },
+  },
 };
 
 const productJsonLd = {

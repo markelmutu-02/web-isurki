@@ -10,6 +10,13 @@ export const metadata: Metadata = {
     "Sobre nosotros - Isurki",
   description:
     "Descubre quiénes somos y nuestra historia",
+  alternates: {
+    canonical: "https://isurki.com/about-us",
+    languages: {
+      es: "https://isurki.com/about-us",
+      en: "https://isurki.com/en/about-us",
+    },
+  },
 };
 export default function page() {
   return (

@@ -6,6 +6,7 @@ import { useState } from "react";
 interface NewsLetterFormProps {
   placeholder?: string;
   variant?: "footer" | "modal";
+  lang?: "es" | "en";
 }
 
 interface SendEmailEvent extends React.FormEvent<HTMLFormElement> {
@@ -16,9 +17,12 @@ interface SendEmailEvent extends React.FormEvent<HTMLFormElement> {
 }
 
 export default function NewsLetterForm({
-  placeholder = "Correo electrónico",
+  placeholder,
   variant = "footer",
+  lang = "es",
 }: NewsLetterFormProps) {
+  const resolvedPlaceholder =
+    placeholder ?? (lang === "en" ? "Email address" : "Correo electrónico");
   const [success, setSuccess] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
   const handleShowMessage = () => {
@@ -56,7 +60,7 @@ export default function NewsLetterForm({
     <form onSubmit={sendEmail}>
       {" "}
       <fieldset>
-        <input name="email" type="text" placeholder={placeholder} />
+        <input name="email" type="text" placeholder={resolvedPlaceholder} />
         {variant === "footer" && (
           <button type="submit" className="tf-btn-newsletter">
             <i className="icon-PaperPlaneTilt" />
@@ -68,7 +72,7 @@ export default function NewsLetterForm({
           type="submit"
           className="tf-btn style-2 bg-on-suface-container"
         >
-          <span>Suscribirse</span>
+          <span>{lang === "en" ? "Subscribe" : "Suscribirse"}</span>
         </button>
       )}
       <div
@@ -78,10 +82,16 @@ export default function NewsLetterForm({
       >
         {success ? (
           <p style={{ color: "rgb(52, 168, 83)" }}>
-            Te has suscrito correctamente.
+            {lang === "en"
+              ? "You have subscribed successfully."
+              : "Te has suscrito correctamente."}
           </p>
         ) : (
-          <p style={{ color: "red" }}>Algo ha salido mal, inténtalo de nuevo.</p>
+          <p style={{ color: "red" }}>
+            {lang === "en"
+              ? "Something went wrong, please try again."
+              : "Algo ha salido mal, inténtalo de nuevo."}
+          </p>
         )}
       </div>
     </form>

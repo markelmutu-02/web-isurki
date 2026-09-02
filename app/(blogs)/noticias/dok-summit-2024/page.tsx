@@ -11,6 +11,13 @@ const DATE = "2024-11-26";
 export const metadata: Metadata = {
   title: `${TITLE} || Isurki`,
   description: DESCRIPTION,
+  alternates: {
+    canonical: "https://isurki.com/noticias/dok-summit-2024",
+    languages: {
+      es: "https://isurki.com/noticias/dok-summit-2024",
+      en: "https://isurki.com/en/news/dok-summit-2024",
+    },
+  },
   openGraph: {
     type: "article",
     title: TITLE,
