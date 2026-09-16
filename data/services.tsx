@@ -136,7 +136,7 @@ export const servicesData = [
       "Ultra bajo consumo: máxima autonomía de las pilas. Admite alimentación externa",
       "Sin ventanas; siempre a la escucha"
     ],
-    linkText: "Ver más...",
+    linkText: "Ver más sobre IsurLog",
     isActive: true,
   },
     {
@@ -154,7 +154,7 @@ export const servicesData = [
       "Integración directa con dataloggers IsurLog: conexión sencilla y datos listos para IsurDash",
       "Asesoramiento técnico: seleccionamos el sensor o actuador óptimo para cada aplicación"
     ],
-    linkText: "Ver más...",
+    linkText: "Ver más sobre sensores y actuadores",
     isActive: false,
   },
   {
@@ -172,7 +172,7 @@ export const servicesData = [
       "Gráficas, variables virtuales, alertas y mapas para un análisis de datos excepcional",
       "Registros, alarmas, filtros, control de usuarios... Todo lo que necesita un dashboard actual"
     ],
-    linkText: "Ver más...",
+    linkText: "Ver más sobre IsurDash",
     isActive: false,
   },
   {

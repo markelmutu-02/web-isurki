@@ -15,7 +15,7 @@ export const servicesDataEN = [
       "Ultra-low power consumption: maximum battery life. Supports external power",
       "No blind spots; always listening",
     ],
-    linkText: "Learn more...",
+    linkText: "Learn more about IsurLog",
     isActive: true,
   },
   {
@@ -32,7 +32,7 @@ export const servicesDataEN = [
       "Direct integration with IsurLog dataloggers: simple connection with data ready for IsurDash",
       "Technical advice: we help you choose the optimal sensor or actuator for each application",
     ],
-    linkText: "Learn more...",
+    linkText: "Learn more about sensors and actuators",
     isActive: false,
   },
   {
@@ -50,7 +50,7 @@ export const servicesDataEN = [
       "Charts, virtual variables, alerts and maps for outstanding data analysis",
       "Logs, alarms, filters, user management... everything a modern dashboard needs",
     ],
-    linkText: "Learn more...",
+    linkText: "Learn more about IsurDash",
     isActive: false,
   },
   {

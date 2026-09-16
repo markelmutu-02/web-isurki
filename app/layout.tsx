@@ -48,10 +48,11 @@ import { ReactNode } from "react";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
   name: "Isurki",
   url: "https://isurki.com",
   logo: "https://isurki.com/image/logo/logo.svg",
+  image: "https://isurki.com/image/logo/logo.svg",
   description:
     "Instrumentación y control al servicio de su industria: soluciones propias de captación, monitorización y gestión de datos, diseñadas para entornos exigentes.",
   address: {
@@ -61,6 +62,19 @@ const organizationJsonLd = {
     addressRegion: "Gipuzkoa",
     postalCode: "20305",
     addressCountry: "ES",
+  },
+  // Coordenadas del mapa embebido en /contact-us (Map.tsx), no inventadas.
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 43.32872261229307,
+    longitude: -1.8252411468636607,
+  },
+  telephone: "+34-943-63-54-37",
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "08:00",
+    closes: "19:00",
   },
   contactPoint: {
     "@type": "ContactPoint",
