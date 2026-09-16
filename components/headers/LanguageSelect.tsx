@@ -11,7 +11,10 @@ export default function LanguageDropdown({
 }) {
   const pathname = usePathname() || "/";
   const esHref = getAlternatePath(pathname, "es");
-  const enHref = getAlternatePath(pathname, "en");
+  // EN temporarily hidden from the selector while the English copy is
+  // being reviewed (site still exists at /en, just not promoted here).
+  // Uncomment both this and the <Link> below to bring it back.
+  // const enHref = getAlternatePath(pathname, "en");
 
   return (
     <div className="tf-dropdown-sort tf-language">
@@ -23,9 +26,9 @@ export default function LanguageDropdown({
         <Link href={esHref} className="select-item">
           <span className="text-value-item">ES</span>
         </Link>
-        <Link href={enHref} className="select-item">
+        {/* <Link href={enHref} className="select-item">
           <span className="text-value-item">EN</span>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
