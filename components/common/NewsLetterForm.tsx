@@ -9,12 +9,9 @@ interface NewsLetterFormProps {
   lang?: "es" | "en";
 }
 
-interface SendEmailEvent extends React.FormEvent<HTMLFormElement> {
-  target: HTMLFormElement & {
-    email: { value: string };
-    reset: () => void;
-  };
-}
+type NewsletterFormElement = HTMLFormElement & {
+  email: { value: string };
+};
 
 export default function NewsLetterForm({
   placeholder,
@@ -32,9 +29,10 @@ export default function NewsLetterForm({
     }, 2000);
   };
 
-  const sendEmail = async (e: SendEmailEvent): Promise<void> => {
+  const sendEmail = async (e: React.SubmitEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault(); // Prevent default form submission behavior
-    const email = e.target.email.value;
+    const form = e.currentTarget as NewsletterFormElement;
+    const email = form.email.value;
 
     try {
       const response = await axios.post("/api/newsletter", {
@@ -42,7 +40,7 @@ export default function NewsLetterForm({
       });
 
       if ([200, 201].includes(response.status)) {
-        e.target.reset(); // Reset the form
+        form.reset(); // Reset the form
         setSuccess(true); // Set success state
         handleShowMessage();
       } else {
@@ -52,7 +50,7 @@ export default function NewsLetterForm({
     } catch (error) {
       setSuccess(false); // Set error state
       handleShowMessage();
-      e.target.reset(); // Reset the form
+      form.reset(); // Reset the form
     }
   };
 

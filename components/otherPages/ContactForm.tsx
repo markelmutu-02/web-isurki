@@ -16,8 +16,6 @@ interface ContactFormElement extends HTMLFormElement {
   elements: ContactFormElements;
 }
 
-interface SendEmailEvent extends React.FormEvent<ContactFormElement> {}
-
 export default function ContactForm() {
   const [success, setSuccess] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
@@ -30,12 +28,12 @@ export default function ContactForm() {
     }, 2000);
   };
 
-  const sendEmail = async (e: SendEmailEvent): Promise<void> => {
+  const sendEmail = async (e: React.SubmitEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault(); // Prevent default form submission behavior
 
     // Guardamos la referencia al formulario ANTES del await,
     // porque e.currentTarget puede volverse null después de una operación async
-    const form = e.currentTarget;
+    const form = e.currentTarget as ContactFormElement;
 
     const name = form.elements.name.value;
     const email = form.elements.email.value;
