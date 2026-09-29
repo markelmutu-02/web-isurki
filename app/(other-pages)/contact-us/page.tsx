@@ -25,7 +25,7 @@ export default function page() {
         <div className="tf-container position-relative">
           <div className="page-title-content">
             {/*<Breadcumb pageName="Contact Us" />*/}
-            <h2 className="title-page-title">Contacto</h2>
+            <h1 className="title-page-title">Contacto</h1>
             <div className="sub-title body-2">
               Cuéntanos tu proyecto y te ayudamos a encontrar la solución de
               instrumentación

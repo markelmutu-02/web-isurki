@@ -66,10 +66,10 @@ export default function page() {
           <div className="row">
             <div className="col-12">
               <div className="page-title-content">
-                <h2 className="title-page-title">
+                <h1 className="title-page-title">
                   Ya disponible la nueva calculadora de consumos y autonomía a
                   pilas
-                </h2>
+                </h1>
                 <div className="sub-title body-2">
                   Producto &middot; 2 de septiembre de 2026
                 </div>

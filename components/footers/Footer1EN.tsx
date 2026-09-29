@@ -1,4 +1,5 @@
 "use client";
+import { trackDirectionsConversion } from "@/lib/trackDirectionsConversion";
 import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect } from "react";
@@ -69,6 +70,7 @@ export default function Footer1EN({ parentClass = "footer" }) {
                       href="https://www.google.com/maps?q=C/+Gabiria+2,+20305+Irun,+Gipuzkoa"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={trackDirectionsConversion}
                     >
                       C/ Gabiria n.2, Planta 1. Local P. Irun, 20305 (Spain)
                     </a>

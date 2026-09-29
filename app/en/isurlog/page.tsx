@@ -39,7 +39,7 @@ export default function page() {
         <div className="tf-container">
           <div className="page-title-content">
 
-            <h2 className="title-page-title">IsurLog</h2>
+            <h1 className="title-page-title">IsurLog</h1>
             <div className="sub-title body-2">
               Next-generation IIoT datalogger with the most powerful software on the market
             </div>

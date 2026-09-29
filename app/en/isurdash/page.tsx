@@ -40,7 +40,7 @@ export default function page() {
       <div className="page-title style-1 bg-img-6">
         <div className="tf-container">
           <div className="page-title-content">
-            <h2 className="title-page-title">IsurDash</h2>
+            <h1 className="title-page-title">IsurDash</h1>
             <div className="sub-title body-2">
               Isurki's web platform that fully controls the Isurki ecosystem
             </div>

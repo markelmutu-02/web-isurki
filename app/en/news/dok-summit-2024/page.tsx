@@ -58,7 +58,7 @@ export default function page() {
           <div className="row">
             <div className="col-12">
               <div className="page-title-content">
-                <h2 className="title-page-title">DOK Summit 2024</h2>
+                <h1 className="title-page-title">DOK Summit 2024</h1>
                 <div className="sub-title body-2">
                   Event &middot; November 26, 2024
                 </div>

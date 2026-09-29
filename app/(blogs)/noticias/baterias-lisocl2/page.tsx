@@ -70,10 +70,10 @@ export default function page() {
           <div className="row">
             <div className="col-12">
               <div className="page-title-content">
-                <h2 className="title-page-title">
+                <h1 className="title-page-title">
                   Nuevas baterías LiSOCl2 para el ISURLOG: hasta 4 años de
                   autonomía sin mantenimiento
-                </h2>
+                </h1>
                 <div className="sub-title body-2">
                   Producto &middot; 10 de agosto de 2026
                 </div>

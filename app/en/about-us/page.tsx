@@ -22,7 +22,7 @@ export default function page() {
       <div className="page-title style-1 bg-img-4">
         <div className="tf-container">
           <div className="page-title-content">
-            <h2 className="title-page-title">Get to know us</h2>
+            <h1 className="title-page-title">Get to know us</h1>
             <div className="sub-title body-2">
               Discover our mission to empower our clients with expert solutions for greater confidence,
               <br />

@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import DropdownSelect from "./DropdownSelect";
+import Turnstile from "./Turnstile";
 import axios from "axios";
 import { useState } from "react";
+import { trackFormSubmitConversion } from "@/lib/trackFormSubmitConversion";
 
 export default function ContactForm({
   parentClass = "form-contact-home style-border",
@@ -20,6 +22,7 @@ export default function ContactForm({
   const [success, setSuccess] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
   const [subject, setSubject] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
   const handleShowMessage = () => {
     setShowMessage(true);
     setTimeout(() => {
@@ -73,6 +76,7 @@ export default function ContactForm({
     email: { value: string };
     phone: { value: string };
     message: { value: string };
+    company: { value: string };
   };
 
   const sendEmail = async (e: React.SubmitEvent<HTMLFormElement>): Promise<void> => {
@@ -86,6 +90,7 @@ export default function ContactForm({
     const email = form.email.value;
     const phone = form.phone.value;
     const message = form.message.value;
+    const company = form.company.value;
 
     try {
       const response = await axios.post("/api/contact", {
@@ -94,11 +99,17 @@ export default function ContactForm({
         phone,
         subject,
         message,
+        company,
+        turnstileToken,
       });
 
       if ([200, 201].includes(response.status)) {
+        if (response.data?.converted) {
+          trackFormSubmitConversion();
+        }
         form.reset(); // Reset the form
         setSubject(""); // Reset the dropdown selection too
+        setTurnstileToken("");
         setSuccess(true); // Set success state
         handleShowMessage();
       } else {
@@ -117,6 +128,25 @@ export default function ContactForm({
       <h5 className={`title-form ${isTitleCenter ? "text-center" : ""}`}>
         {resolvedTitle}
       </h5>
+      <div
+        style={{
+          position: "absolute",
+          left: "-9999px",
+          width: "1px",
+          height: "1px",
+          overflow: "hidden",
+        }}
+        aria-hidden="true"
+      >
+        <label htmlFor="company">Empresa</label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       <fieldset>
         <input required name="name" type="text" placeholder={t.name} />
       </fieldset>
@@ -131,6 +161,7 @@ export default function ContactForm({
       <fieldset>
         <textarea required  name="message" placeholder={t.message} defaultValue={""} />
       </fieldset>
+      <Turnstile onVerify={setTurnstileToken} onExpire={() => setTurnstileToken("")} />
       <div
         className={`tfSubscribeMsg  footer-sub-element ${
           showMessage ? "active" : ""

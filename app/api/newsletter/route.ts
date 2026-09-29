@@ -1,13 +1,64 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { verifyTurnstile } from "@/lib/verifyTurnstile";
+
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const RATE_LIMIT_MAX = 5;
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+  entry.count += 1;
+  return entry.count > RATE_LIMIT_MAX;
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
 
 export async function POST(req: NextRequest) {
   try {
-    const { email } = await req.json();
+    const { email, company, turnstileToken } = await req.json();
+
+    // Honeypot: campo oculto que solo rellenan los bots. Fingimos éxito sin enviar nada.
+    if (company) {
+      return NextResponse.json(
+        { message: "Suscripción enviada correctamente" },
+        { status: 200 }
+      );
+    }
 
     if (!email) {
       return NextResponse.json(
         { error: "Email no proporcionado" },
+        { status: 400 }
+      );
+    }
+
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: "Demasiadas solicitudes, inténtalo más tarde" },
+        { status: 429 }
+      );
+    }
+
+    const isHuman = await verifyTurnstile(turnstileToken, ip);
+    if (!isHuman) {
+      return NextResponse.json(
+        { error: "Verificación anti-bot fallida" },
         { status: 400 }
       );
     }
@@ -26,7 +77,7 @@ export async function POST(req: NextRequest) {
       from: process.env.EMAIL_SERVER_USER,
       to: process.env.EMAIL_TO,
       subject: "Nueva suscripción al newsletter - Isurki",
-      html: `<p>Nueva suscripción recibida desde la web:</p><p><strong>Email:</strong> ${email}</p>`,
+      html: `<p>Nueva suscripción recibida desde la web:</p><p><strong>Email:</strong> ${escapeHtml(email)}</p>`,
     });
 
     return NextResponse.json(

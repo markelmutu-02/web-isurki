@@ -1,4 +1,5 @@
 "use client";
+import { trackDirectionsConversion } from "@/lib/trackDirectionsConversion";
 import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect } from "react";
@@ -70,6 +71,7 @@ export default function Footer1({ parentClass = "footer" }) {
                       href="https://www.google.com/maps?q=C/+Gabiria+2,+20305+Irun,+Gipuzkoa"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={trackDirectionsConversion}
                     >
                       C/ Gabiria n.2, Planta 1. Local P. Irún, 20305
                     </a>
@@ -94,6 +96,11 @@ export default function Footer1({ parentClass = "footer" }) {
                   </div>
                   <div className="tf-collapse-content">
                     <ul>
+                      <li className="support-item-footer caption-1">
+                        <Link href={`/guias`}>
+                          Artículos
+                        </Link>
+                      </li>
                       <li className="support-item-footer caption-1">
                         <Link href={`/noticias`}>
                           Noticias

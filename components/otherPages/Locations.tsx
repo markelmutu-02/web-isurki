@@ -1,4 +1,5 @@
 "use client";
+import { trackDirectionsConversion } from "@/lib/trackDirectionsConversion";
 import { offices } from "@/data/locations";
 import Image from "next/image";
 import React from "react";
@@ -32,6 +33,7 @@ function OfficeCard({ office }: { office: (typeof offices)[number] }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="arrdess"
+                onClick={trackDirectionsConversion}
               >
                 {office.address}
               </a>

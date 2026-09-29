@@ -58,10 +58,10 @@ export default function page() {
           <div className="row">
             <div className="col-12">
               <div className="page-title-content">
-                <h2 className="title-page-title">
+                <h1 className="title-page-title">
                   DECT NR+: la tecnología 5G no celular para tener una red
                   privada real, sin operadoras ni contratos
-                </h2>
+                </h1>
                 <div className="sub-title body-2">
                   Producto &middot; 10 de junio de 2026
                 </div>

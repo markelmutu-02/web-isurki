@@ -57,7 +57,7 @@ export default function page() {
           <div className="row">
             <div className="col-12">
               <div className="page-title-content">
-                <h2 className="title-page-title">Espai Caldes</h2>
+                <h1 className="title-page-title">Espai Caldes</h1>
                 <div className="sub-title body-2">
                   Instrumentación y control &middot; 15 de noviembre de 2024
                 </div>

@@ -58,7 +58,7 @@ export default function page() {
           <div className="row">
             <div className="col-12">
               <div className="page-title-content">
-                <h2 className="title-page-title">POLO OARSOALDEA URDINA</h2>
+                <h1 className="title-page-title">POLO OARSOALDEA URDINA</h1>
                 <div className="sub-title body-2">
                   Event &middot; December 4, 2024
                 </div>

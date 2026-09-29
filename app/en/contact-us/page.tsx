@@ -23,7 +23,7 @@ export default function page() {
       <div className="page-title style-1 bg-img-13">
         <div className="tf-container position-relative">
           <div className="page-title-content">
-            <h2 className="title-page-title">Contact</h2>
+            <h1 className="title-page-title">Contact</h1>
             <div className="sub-title body-2">
               Tell us about your project and we'll help you find the
               instrumentation and monitoring solution

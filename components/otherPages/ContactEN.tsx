@@ -1,4 +1,5 @@
 "use client";
+import { trackDirectionsConversion } from "@/lib/trackDirectionsConversion";
 import React from "react";
 import DropdownSelect from "../common/DropdownSelect";
 import Link from "next/link";
@@ -93,6 +94,7 @@ export default function ContactEN() {
                         href="https://www.google.com/maps?q=C/+Gabiria+2,+20305+Irun,+Gipuzkoa"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={trackDirectionsConversion}
                         className="caption-1 text"
                       >
                         C/ Gabiria n.2, Planta 1. Local P. <br/> Irún, 20305

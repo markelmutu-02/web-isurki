@@ -1,4 +1,5 @@
 "use client";
+import { trackDirectionsConversion } from "@/lib/trackDirectionsConversion";
 import Image from "next/image";
 import React from "react";
 import dynamic from "next/dynamic";
@@ -121,6 +122,7 @@ export default function MareografosDetailsEN() {
                         href="https://www.google.com/maps?q=C/+Gabiria+2,+20305+Irun,+Gipuzkoa"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={trackDirectionsConversion}
                         className="caption-1 text"
                       >
                         C/ Gabiria n.2, Planta 1. Local P. Irún, 20305

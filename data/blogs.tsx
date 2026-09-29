@@ -360,6 +360,23 @@ interface NewsPost {
 
 export const posts4: NewsPost[] = [
   {
+    id: 38,
+    slug: "conectividad-satelital-ntn",
+    imgSrc: "/image/blog/isurlog-ntn.jpg",
+    imgWidth: 400,
+    imgHeight: 300,
+    category: "Producto",
+    title: "Conectividad satelital NTN ya disponible en IsurLog",
+    description:
+      "IsurLog incorpora de serie conectividad satelital NTN, permitiendo desplegar dataloggers IoT en zonas sin cobertura terrestre sin necesidad de un módem satelital independiente",
+    date: {
+      day: "23",
+      month: "SEP",
+      year: "2026"
+    },
+    delay: "0s",
+  },
+  {
     id: 37,
     slug: "calculadora-autonomia-pilas",
     imgSrc: "/image/blog/battery-calc1.jpg",

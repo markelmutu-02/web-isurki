@@ -58,9 +58,9 @@ export default function page() {
           <div className="row">
             <div className="col-12">
               <div className="page-title-content">
-                <h2 className="title-page-title">
+                <h1 className="title-page-title">
                   Easy-Wiring: el nuevo sistema de cableado para IsurLog
-                </h2>
+                </h1>
                 <div className="sub-title body-2">
                   Producto &middot; 15 de mayo de 2026
                 </div>

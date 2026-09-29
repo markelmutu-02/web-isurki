@@ -21,7 +21,7 @@ export default function page() {
           <div className="row">
             <div className="col-12">
               <div className="page-title-content">
-                <h2 className="title-page-title">Política de cookies</h2>
+                <h1 className="title-page-title">Política de cookies</h1>
                 <div className="sub-title body-2">
                   Qué cookies utilizamos en este sitio web y cómo puedes
                   gestionarlas.

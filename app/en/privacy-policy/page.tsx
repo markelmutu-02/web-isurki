@@ -22,7 +22,7 @@ export default function page() {
           <div className="row">
             <div className="col-12">
               <div className="page-title-content">
-                <h2 className="title-page-title">Privacy policy</h2>
+                <h1 className="title-page-title">Privacy policy</h1>
                 <div className="sub-title body-2">
                   How we handle your personal data when you visit or
                   contact us.

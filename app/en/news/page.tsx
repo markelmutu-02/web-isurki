@@ -20,7 +20,7 @@ export default function page() {
           <div className="row">
             <div className="col-12">
               <div className="page-title-content">
-                <h2 className="title-page-title">Isurki News</h2>
+                <h1 className="title-page-title">Isurki News</h1>
                 <div className="sub-title body-2">
                   A section where you can see real-world examples of cases Isurki has been involved in,
                   <br/>

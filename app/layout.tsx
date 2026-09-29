@@ -115,6 +115,32 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           })(window,document,'script','dataLayer','GTM-5QQ4NMW2');`}
         </Script>
         {/* End Google Tag Manager */}
+        {/* Google tag (gtag.js) - Google Ads conversion tracking */}
+        <Script
+          id="google-ads-tag"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18413549422"
+        />
+        <Script id="google-ads-config" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-18413549422');`}
+        </Script>
+        {/* End Google tag */}
+        {/* Cloudflare Turnstile: cargado una sola vez a nivel global. Los
+            componentes <Turnstile> individuales esperan a que window.turnstile
+            esté disponible en vez de cargar el script cada uno por su cuenta
+            (con varios formularios en la misma página, como el de contacto y
+            el del newsletter del footer, cargarlo por instancia provoca una
+            condición de carrera y el widget a veces no se pinta). */}
+        {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && (
+          <Script
+            id="cf-turnstile-api"
+            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+            strategy="lazyOnload"
+          />
+        )}
       </head>
       <body className={`counter-scroll popup-loader`}>
         {/* Google Tag Manager (noscript) */}

@@ -24,7 +24,7 @@ export default function page() {
       <div className="page-title style-1 bg-img-4">
         <div className="tf-container">
           <div className="page-title-content">
-            <h2 className="title-page-title">Conócenos</h2>
+            <h1 className="title-page-title">Conócenos</h1>
             <div className="sub-title body-2">
               Descubra nuestra misión de empoderar a los clientes con soluciones expertas para una mayor confianza,
               <br />
